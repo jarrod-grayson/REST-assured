@@ -5,7 +5,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = {"src/test/resources"},
-		format={"pretty","html:target/reports/test-report"},
+		plugin = {"pretty", "html:target/cucumber-html-report", "json:target/cucumber-report.json"},
 		tags= "@smokeTest"
 )
 public class RunCukesTest {}
